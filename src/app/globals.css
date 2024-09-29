@@ -2,45 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 背景を淡い灰色に戻す */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5; /* 淡い灰色 */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.header {
+  background-color: rgba(255, 255, 255, 0.9); /* 白の背景 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* 軽いボーダーで区切り */
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05); /* ほんのりシャドウ */
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-out;
+footer {
+  background-color: rgba(255, 255, 255, 0.9); /* フッターも白に */
+  color: rgba(0, 0, 0, 0.6); /* テキストをグレーに */
+  padding: 0.5rem;
 }
+
